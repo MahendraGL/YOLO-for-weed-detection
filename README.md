@@ -5,7 +5,7 @@
 ![Focus](https://img.shields.io/badge/Focus-Edge_AI_%26_Computer_Vision-blue)
 
 ## 📄 Overview
-This repository serves as an archive for my Master's Thesis: **"Automated Weed Detection in Crops using Computer Vision."**
+This repository serves as an archive for my Master's Thesis: **"Autonomous Image-Based Weed Detection System for Smart Agriculture."**
 
 The project explores the feasibility of deploying deep learning models on resource-constrained edge devices for precision agriculture. Specifically, it compares four variations of the YOLO (You Only Look Once) architecture to find the optimal balance between inference speed (FPS) and detection accuracy (mAP) on a Raspberry Pi.
 
