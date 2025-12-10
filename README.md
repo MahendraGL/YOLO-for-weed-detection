@@ -1,49 +1,56 @@
-# Automated Weed Detection on Edge Devices (Master's Thesis)
+# Autonomous Image-Based Weed Detection System for Smart Agriculture
 
-![Project Status](https://img.shields.io/badge/Status-Thesis_Completed-success)
-![Hardware](https://img.shields.io/badge/Hardware-Raspberry_Pi-red)
-![Focus](https://img.shields.io/badge/Focus-Edge_AI_%26_Computer_Vision-blue)
+![Status](https://img.shields.io/badge/Status-Thesis_Completed-success)
+![Device](https://img.shields.io/badge/Edge_Device-Raspberry_Pi_4B-red)
+![Framework](https://img.shields.io/badge/Models-YOLOv5_|_v6_|_v7_|_v8-blue)
+![mAP](https://img.shields.io/badge/Best_mAP-73.8%25-green)
 
-## 📄 Overview
-This repository serves as an archive for my Master's Thesis: **"Autonomous Image-Based Weed Detection System for Smart Agriculture."**
+## 📄 Abstract
+This repository hosts the documentation and experimental results for my Master's Thesis titled **"Autonomous Image-Based Weed Detection System for Smart Agriculture."**
 
-The project explores the feasibility of deploying deep learning models on resource-constrained edge devices for precision agriculture. Specifically, it compares four variations of the YOLO (You Only Look Once) architecture to find the optimal balance between inference speed (FPS) and detection accuracy (mAP) on a Raspberry Pi.
+The project addresses the need for cost-effective precision agriculture in India by deploying deep learning models on edge devices. We performed a comparative analysis of lightweight YOLO architectures (v5 through v8) to detect weeds in **Fennel and Psyllium (Jeera/Isabgol)** crops. The goal was to find the optimal balance between accuracy (mAP) and inference speed (FPS) on a **Raspberry Pi 4 Model B**.
 
-> **Note:** The complete training code is archived locally. This repository hosts the thesis documentation, experimental results, and architectural breakdown.
+> **Note:** This repository serves as a portfolio archive. The complete dataset and raw training weights are stored locally.
 
-## 📥 Thesis Document
-You can read the full detailed analysis, methodology, and mathematical background in the thesis document attached below:
+## 📥 Read the Thesis
+For the complete methodology, mathematical background, and error analysis, please refer to the full report:
+[**📄 Click here to view the Master's Thesis (PDF)**](./MTP_Report_Final.pdf)
 
-[**📄 Click here to view the Full Master's Thesis (PDF)**](./MTP_Report.pdf)
+## 🛠️ Methodology
+* [cite_start]**Dataset:** Custom dataset of **1,300+ images** collected from local farmlands using smartphone cameras[cite: 232].
+* [cite_start]**Classes:** The model is trained to distinguish between two specific classes: `Crop` and `Weed`[cite: 261].
+* [cite_start]**Preprocessing:** Images were resized, augmented (rotation/cropping), and annotated using MakeSense.ai[cite: 259].
+* [cite_start]**Hardware:** Raspberry Pi 4 Model B (4GB RAM) with active cooling considerations[cite: 588].
 
-## 🎯 Objectives
-* **Dataset:** Collection and annotation of custom crop/weed datasets.
-* **Model Comparison:** Benchmarking YOLO v5, v6, v7, and v8.
-* **Quantization/Optimization:** Converting models (e.g., ONNX, TFLite) for ARM-based processors.
-* **Deployment:** Real-time inference testing on Raspberry Pi.
+## 📊 Key Results
+We compared four lightweight YOLO variants. **YOLOv5-nano** emerged as the best performer for this specific dataset, achieving the highest mAP and a usable frame rate on the Raspberry Pi without a dedicated GPU.
 
-## 📊 Key Results & Performance
-The models were evaluated based on Mean Average Precision (mAP@0.5) and Frames Per Second (FPS) on the Raspberry Pi.
+| Model Version | Parameters | Model Size | Best mAP@0.5 | Inference (Pi CPU) |
+|:-------------:|:----------:|:----------:|:------------:|:------------------:|
+| **YOLOv5-nano**| **1.7M** | **3.65 MB**| **0.738** | **~200ms (5 FPS)** |
+| YOLOv6-lite   | 1.09M      | 2.42 MB    | 0.661        | ~260ms             |
+| YOLOv7-tiny   | 2.3M       | 4.69 MB    | 0.638        | ~220ms             |
+| YOLOv8-nano   | 3.0M       | 5.94 MB    | 0.657        | ~230ms             |
 
-| Model Version | Precision | Recall | mAP@0.5 | Pi Inference (FPS) |
-|:-------------:|:---------:|:------:|:-------:|:------------------:|
-| YOLO v5s      | ...       | ...    | ...     | ...                |
-| YOLO v6n      | ...       | ...    | ...     | ...                |
-| YOLO v7-tiny  | ...       | ...    | ...     | ...                |
-| YOLO v8n      | ...       | ...    | ...     | ...                |
+[cite_start]*Data Source: Thesis Results Chapter, Table 5.2 and Equation 5[cite: 554, 567, 640].*
 
-**Conclusion:** The experiment demonstrated that **YOLO v5** offered the best trade-off, achieving real-time performance suitable for robotic weeding applications.
+[cite_start]**Conclusion:** YOLOv5n proved to be the most effective for edge deployment, achieving **5 FPS** on the Raspberry Pi CPU, which is sufficient for real-time robotic weeding applications[cite: 640, 681].
 
-## 🖼️ Visuals
-### 1. Detection Samples
-*(Replace this text with a screenshot from your PDF showing the bounding boxes around weeds)*
+## 📸 Visuals
+
+### 1. Real-World Detection
+*Detection of crops vs. weeds on the custom dataset.*
 ![Detection Example](./images/results.png)
 
-### 2. Training Metrics
-*(Replace this text with a screenshot of your Loss/Accuracy graphs from the PDF)*
+### 2. Training Performance (YOLOv5n)
+*The model reached convergence around 30 epochs, achieving a stable mAP of 0.738.*
 ![Training Graphs](./images/YOLOv5_1.png)
 
-## 🛠️ Technology Stack
-* **Hardware:** Raspberry Pi [4b], RPi Camera Module
-* **Software:** Python, PyTorch, OpenCV
-* **Deployment:** ONNX Runtime / TFLite
+### 3. Edge Deployment Setup
+*The experimental setup involving the Raspberry Pi 4B and Camera Module.*
+![Hardware Setup](./images/hardware_setup.png)
+
+## 📬 Contact
+**Mahendra G L**
+*M.Tech in Robotics and Mobility Systems*
+*IIT Jodhpur*
