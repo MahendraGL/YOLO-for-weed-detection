@@ -38,7 +38,7 @@ We compared four lightweight YOLO variants. **YOLOv5-nano** emerged as the best 
 
 ### 1. Real-World Detection
 *Detection of crops vs. weeds on the custom dataset.*
-![Detection Example](./images/results.png)
+<img src="./images/detection.png" width="600" alt="Detection Output">
 
 ### 2. Training Performance (YOLOv5n)
 *The model reached convergence around 30 epochs, achieving a stable mAP of 0.738.*
