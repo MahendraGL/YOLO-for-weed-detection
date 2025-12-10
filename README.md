@@ -47,8 +47,3 @@ We compared four lightweight YOLO variants. **YOLOv5-nano** emerged as the best 
 ### 3. Edge Deployment Setup
 *The experimental setup involving the Raspberry Pi 4B and Camera Module.*
 ![Hardware Setup](./images/hardware_setup.png)
-
-## 📬 Contact
-**Mahendra G L**
-*M.Tech in Robotics and Mobility Systems*
-*IIT Jodhpur*
