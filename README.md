@@ -17,10 +17,10 @@ For the complete methodology, mathematical background, and error analysis, pleas
 [**📄 Click here to view the Master's Thesis (PDF)**](./MTP_Report.pdf)
 
 ## 🛠️ Methodology
-* [cite_start]**Dataset:** Custom dataset of **1,300+ images** collected from local farmlands using smartphone cameras[cite: 232].
-* [cite_start]**Classes:** The model is trained to distinguish between two specific classes: `Crop` and `Weed`[cite: 261].
-* [cite_start]**Preprocessing:** Images were resized, augmented (rotation/cropping), and annotated using MakeSense.ai[cite: 259].
-* [cite_start]**Hardware:** Raspberry Pi 4 Model B (4GB RAM) with active cooling considerations[cite: 588].
+* **Dataset:** Custom dataset of **1,300+ images** collected from local farmlands using smartphone cameras.
+* **Classes:** The model is trained to distinguish between two specific classes: `Crop` and `Weed`.
+* **Preprocessing:** Images were resized, augmented (rotation/cropping), and annotated using MakeSense.ai.
+* **Hardware:** Raspberry Pi 4 Model B (4GB RAM) with active cooling considerations.
 
 ## 📊 Key Results
 We compared four lightweight YOLO variants. **YOLOv5-nano** emerged as the best performer for this specific dataset, achieving the highest mAP and a usable frame rate on the Raspberry Pi without a dedicated GPU.
@@ -32,9 +32,9 @@ We compared four lightweight YOLO variants. **YOLOv5-nano** emerged as the best 
 | YOLOv7-tiny   | 2.3M       | 4.69 MB    | 0.638        | ~220ms             |
 | YOLOv8-nano   | 3.0M       | 5.94 MB    | 0.657        | ~230ms             |
 
-[cite_start]*Data Source: Thesis Results Chapter, Table 5.2 and Equation 5[cite: 554, 567, 640].*
+*Data Source: Thesis Results Chapter, Table 5.2 and Equation 5.*
 
-[cite_start]**Conclusion:** YOLOv5n proved to be the most effective for edge deployment, achieving **5 FPS** on the Raspberry Pi CPU, which is sufficient for real-time robotic weeding applications[cite: 640, 681].
+**Conclusion:** YOLOv5n proved to be the most effective for edge deployment, achieving **5 FPS** on the Raspberry Pi CPU, which is sufficient for real-time robotic weeding applications.
 
 ## 📸 Visuals
 
