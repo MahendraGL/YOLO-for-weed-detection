@@ -32,7 +32,7 @@ The models were evaluated based on Mean Average Precision (mAP@0.5) and Frames P
 | YOLO v7-tiny  | ...       | ...    | ...     | ...                |
 | YOLO v8n      | ...       | ...    | ...     | ...                |
 
-**Conclusion:** The experiment demonstrated that **[YOLO v5]** offered the best trade-off, achieving real-time performance suitable for robotic weeding applications.
+**Conclusion:** The experiment demonstrated that **YOLO v5** offered the best trade-off, achieving real-time performance suitable for robotic weeding applications.
 
 ## 🖼️ Visuals
 ### 1. Detection Samples
