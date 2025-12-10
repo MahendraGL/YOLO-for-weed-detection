@@ -14,7 +14,7 @@ The project addresses the need for cost-effective precision agriculture in India
 
 ## 📥 Read the Thesis
 For the complete methodology, mathematical background, and error analysis, please refer to the full report:
-[**📄 Click here to view the Master's Thesis (PDF)**](./MTP_Report_Final.pdf)
+[**📄 Click here to view the Master's Thesis (PDF)**](./MTP_Report.pdf)
 
 ## 🛠️ Methodology
 * [cite_start]**Dataset:** Custom dataset of **1,300+ images** collected from local farmlands using smartphone cameras[cite: 232].
