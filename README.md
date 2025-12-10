@@ -32,8 +32,6 @@ We compared four lightweight YOLO variants. **YOLOv5-nano** emerged as the best 
 | YOLOv7-tiny   | 2.3M       | 4.69 MB    | 0.638        | ~220ms             |
 | YOLOv8-nano   | 3.0M       | 5.94 MB    | 0.657        | ~230ms             |
 
-*Data Source: Thesis Results Chapter, Table 5.2 and Equation 5.*
-
 **Conclusion:** YOLOv5n proved to be the most effective for edge deployment, achieving **5 FPS** on the Raspberry Pi CPU, which is sufficient for real-time robotic weeding applications.
 
 ## 📸 Visuals
